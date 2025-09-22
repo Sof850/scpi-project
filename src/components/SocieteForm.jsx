@@ -29,8 +29,6 @@ export default function SocieteForm({ societe, onClose, onSuccess }) {
         }
     }, [societe])
 
-    const API_URL = import.meta.env.VITE_API_URL
-
     const handleSubmit = async (e) => {
         e.preventDefault()
         setLoading(true)
@@ -38,8 +36,8 @@ export default function SocieteForm({ societe, onClose, onSuccess }) {
 
         try {
             const url = societe 
-                ? `${API_URL}/api/admin/societes/${societe.id}`
-                : `${API_URL}/api/admin/societes`
+                ? `https://scp-project-backend.onrender.com/api/admin/societes/${societe.id}`
+                : `https://scp-project-backend.onrender.com/api/admin/societes`
             
             const method = societe ? 'PUT' : 'POST'
 

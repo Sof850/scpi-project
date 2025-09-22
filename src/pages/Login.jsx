@@ -17,7 +17,7 @@ export default function Login({ isOpen, onClose, onLogin }) {
         setError('')
 
         try {
-            const response = await fetch(`${API_URL}/api/login`, {
+            const response = await fetch(`https://scp-project-backend.onrender.com/api/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

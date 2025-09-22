@@ -17,8 +17,6 @@ export default function AdminDashboard() {
         return <Navigate to="/" replace />
     }
 
-    const API_URL = import.meta.env.VITE_API_URL
-
     useEffect(() => {
         fetchData()
     }, [])
@@ -26,8 +24,8 @@ export default function AdminDashboard() {
     const fetchData = async () => {
         try {
             const [societesRes, scpisRes] = await Promise.all([
-                fetch(`${API_URL}/api/societes`),
-                fetch(`${API_URL}/api/scpi`)
+                fetch(`https://scp-project-backend.onrender.com/api/societes`),
+                fetch(`https://scp-project-backend.onrender.com/api/scpi`)
             ])
             
             const societesData = await societesRes.json()
@@ -45,7 +43,7 @@ export default function AdminDashboard() {
     const handleDeleteSociete = async (id) => {
         if (window.confirm('Êtes-vous sûr de vouloir supprimer cette société?')) {
             try {
-                const response = await fetch(`${API_URL}/api/admin/societes/${id}`, {
+                const response = await fetch(`https://scp-project-backend.onrender.com/api/admin/societes/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -66,7 +64,7 @@ export default function AdminDashboard() {
     const handleDeleteScpi = async (id) => {
         if (window.confirm('Êtes-vous sûr de vouloir supprimer cette SCPI?')) {
             try {
-                const response = await fetch(`${API_URL}/api/admin/scpi/${id}`, {
+                const response = await fetch(`https://scp-project-backend.onrender.com/api/admin/scpi/${id}`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${token}`

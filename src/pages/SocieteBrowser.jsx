@@ -9,7 +9,7 @@ export default function SocieteBrowser() {
     useEffect(() => {
         const fetchSocietes = async () => {
             try {
-                const response = await fetch(`${API_URL}/api/societes`)
+                const response = await fetch(`https://scp-project-backend.onrender.com/api/societes`)
                 if (!response.ok) {
                     throw new Error('Erreur lors du chargement des sociétés')
                 }

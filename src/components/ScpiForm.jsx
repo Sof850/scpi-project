@@ -19,8 +19,6 @@ export default function ScpiForm({ scpi, societes, onClose, onSuccess }) {
 
     const token = localStorage.getItem('adminToken')
 
-    const API_URL = import.meta.env.VITE_API_UR
-
     useEffect(() => {
         if (scpi) {
             setFormData({
@@ -46,8 +44,8 @@ export default function ScpiForm({ scpi, societes, onClose, onSuccess }) {
 
         try {
             const url = scpi 
-                ? `${API_URL}/api/admin/scpi/${scpi.id}`
-                : `${API_URL}/api/admin/scpi`
+                ? `https://scp-project-backend.onrender.com/api/admin/scpi/${scpi.id}`
+                : `https://scp-project-backend.onrender.com/api/admin/scpi`
             
             const method = scpi ? 'PUT' : 'POST'
 

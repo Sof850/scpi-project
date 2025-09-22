@@ -7,7 +7,7 @@ export default function Main() {
             <div className='main-content'>
                 <h1>Découvrez tout ce qui est possible avec SCPI Browser</h1>
                 <span>
-                    Explorez et analysez les opportunités d’investissement immobilier grâce à notre navigateur complet de données SCPI.
+                    Explorez et analysez les opportunités d'investissement immobilier grâce à notre navigateur complet de données SCPI.
                 </span>
                 <div>
                     <Link to="/scpi">
