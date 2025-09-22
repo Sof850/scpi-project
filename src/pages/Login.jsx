@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Login({ isOpen, onClose, onLogin }) {
     const [formData, setFormData] = useState({
@@ -7,6 +8,8 @@ export default function Login({ isOpen, onClose, onLogin }) {
     })
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
+
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -25,11 +28,12 @@ export default function Login({ isOpen, onClose, onLogin }) {
             const data = await response.json()
 
             if (response.ok) {
-                localStorage.setItem('adminToken', data.jwt)  
+                localStorage.setItem('adminToken', data.token)  
                 localStorage.setItem('adminUser', JSON.stringify({ username: formData.username }))
 
-                onLogin({ username: formData.username }, data.jwt)
+                onLogin({ username: formData.username }, data.token)
                 onClose()
+                navigate('/admin')
             } else {
                 setError(data.message || 'Erreur de connexion')
             }

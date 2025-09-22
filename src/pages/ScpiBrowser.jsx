@@ -7,7 +7,6 @@ export default function ScpiBrowser() {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     
-    // Filter states
     const [filters, setFilters] = useState({
         category: '',
         minTdvm: '',
