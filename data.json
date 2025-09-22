@@ -1,0 +1,72 @@
+{
+  "societes": [
+    {
+      "id": 1,
+      "nom": "Amundi Immobilier",
+      "adresse": "91-93 boulevard Pasteur, 75015 Paris",
+      "telephone": "+33 1 76 32 40 00"
+    },
+    {
+      "id": 2,
+      "nom": "Primonial REIM",
+      "adresse": "36 rue de Naples, 75008 Paris",
+      "telephone": "+33 1 44 21 73 00"
+    },
+    {
+      "id": 3,
+      "nom": "La Française AM",
+      "adresse": "128 boulevard Raspail, 75006 Paris",
+      "telephone": "+33 1 44 56 10 00"
+    }
+  ],
+  "scpi": [
+    {
+      "id": 1,
+      "nom": "Edissimmo",
+      "categorie": "Bureaux",
+      "tdvm": 4.1,
+      "capitalisation": "7,5 Mds €",
+      "societeId": 1
+    },
+    {
+      "id": 2,
+      "nom": "Rivoli Avenir Patrimoine",
+      "categorie": "Bureaux",
+      "tdvm": 4.2,
+      "capitalisation": "3,6 Mds €",
+      "societeId": 1
+    },
+    {
+      "id": 3,
+      "nom": "Primovie",
+      "categorie": "Santé / Éducation",
+      "tdvm": 4.5,
+      "capitalisation": "4,8 Mds €",
+      "societeId": 2
+    },
+    {
+      "id": 4,
+      "nom": "Patrimmo Commerce",
+      "categorie": "Commerces",
+      "tdvm": 4.6,
+      "capitalisation": "1,2 Mds €",
+      "societeId": 2
+    },
+    {
+      "id": 5,
+      "nom": "Épargne Foncière",
+      "categorie": "Diversifiée",
+      "tdvm": 4.4,
+      "capitalisation": "3,4 Mds €",
+      "societeId": 3
+    },
+    {
+      "id": 6,
+      "nom": "LF Europimmo",
+      "categorie": "Bureaux Européens",
+      "tdvm": 4.0,
+      "capitalisation": "1,1 Mds €",
+      "societeId": 3
+    }
+  ]
+}
