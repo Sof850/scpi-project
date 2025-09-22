@@ -22,7 +22,7 @@ export default function ScpiBrowser() {
     useEffect(() => {
         const fetchScpi = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/scpi')
+                const response = await fetch(`${API_URL}/api/scpi`)
                 if (!response.ok) {
                     throw new Error('Erreur lors du chargement des SCPI')
                 }

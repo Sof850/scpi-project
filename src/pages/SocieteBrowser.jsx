@@ -9,7 +9,7 @@ export default function SocieteBrowser() {
     useEffect(() => {
         const fetchSocietes = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/societes')
+                const response = await fetch(`${API_URL}/api/societes`)
                 if (!response.ok) {
                     throw new Error('Erreur lors du chargement des sociétés')
                 }

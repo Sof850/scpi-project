@@ -12,7 +12,7 @@ export default function ScpiDetails() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const scpiResponse = await fetch(`http://localhost:8000/api/scpi/${id}`)
+                const scpiResponse = await fetch(`${API_URL}/api/scpi/${id}`)
                 if (!scpiResponse.ok) {
                     throw new Error('Erreur lors du chargement de la SCPI')
                 }
@@ -20,7 +20,7 @@ export default function ScpiDetails() {
                 setScpi(scpiData)
 
                 if (scpiData.societeGestionId) {
-                    const societeResponse = await fetch(`http://localhost:8000/api/societes/${scpiData.societeGestionId}`)
+                    const societeResponse = await fetch(`${API_URL}/api/societes/${scpiData.societeGestionId}`)
                     if (societeResponse.ok) {
                         const societeData = await societeResponse.json()
                         setSociete(societeData)

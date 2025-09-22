@@ -5,20 +5,20 @@ export default function Main() {
     return (
         <main>
             <div className='main-content'>
-                <h1>Discover what's possible with SCPI Browser</h1>
+                <h1>Découvrez tout ce qui est possible avec SCPI Browser</h1>
                 <span>
-                    Explore and analyze real estate investment opportunities with our comprehensive SCPI data browser.
+                    Explorez et analysez les opportunités d’investissement immobilier grâce à notre navigateur complet de données SCPI.
                 </span>
                 <div>
                     <Link to="/scpi">
-                        <button className='browse-scpi'>Browse SCPI</button>
+                        <button className='browse-scpi'>Parcourir les SCPI</button>
                     </Link>
                     <Link to="/societes">
-                        <button className='browse-societies'>Browse Societies</button>
+                        <button className='browse-societies'>Parcourir les Sociétés</button>
                     </Link>
                 </div>
             </div>
-            <img src={background} alt="Background" className='background' />
+            <img src={background} alt="Arrière-plan" className='background' />
         </main>
     )
 }

@@ -11,7 +11,7 @@ export default function SocieteDetails() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const societeResponse = await fetch(`http://localhost:8000/api/societes/${id}`)
+                const societeResponse = await fetch(`${API_URL}/api/societes/${id}`)
                 if (!societeResponse.ok) {
                     throw new Error('Erreur lors du chargement de la société')
                 }

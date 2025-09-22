@@ -19,6 +19,8 @@ export default function ScpiForm({ scpi, societes, onClose, onSuccess }) {
 
     const token = localStorage.getItem('adminToken')
 
+    const API_URL = import.meta.env.VITE_API_UR
+
     useEffect(() => {
         if (scpi) {
             setFormData({
@@ -44,8 +46,8 @@ export default function ScpiForm({ scpi, societes, onClose, onSuccess }) {
 
         try {
             const url = scpi 
-                ? `http://localhost:8000/api/admin/scpi/${scpi.id}`
-                : 'http://localhost:8000/api/admin/scpi'
+                ? `${API_URL}/api/admin/scpi/${scpi.id}`
+                : `${API_URL}/api/admin/scpi`
             
             const method = scpi ? 'PUT' : 'POST'
 
